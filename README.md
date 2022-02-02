@@ -1,6 +1,6 @@
-# iutannecy_s4_os05a_miniprojet
+# OS05A - Théorie des jeux - Mini projet
 
-## Contributors:
+### Contributors:
 * DUCRET Robin - G22
 * FALCOZ Tom - G22
 * JALET Thomas - G22
