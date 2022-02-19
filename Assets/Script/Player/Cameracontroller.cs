@@ -16,7 +16,7 @@ public class Cameracontroller : MonoBehaviour
     
     void Start()
     {
-        //controller = GetComponent<CharacterController>();
+        controller = GetComponent<CharacterController>();
         if(lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -28,7 +28,7 @@ public class Cameracontroller : MonoBehaviour
     void Update()
     {
         UpdateMouseLook();   
-        //UpdateMovement();
+        UpdateMovement();
     }
 
     void  UpdateMouseLook()
