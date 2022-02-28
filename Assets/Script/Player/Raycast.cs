@@ -25,7 +25,7 @@ public class Raycast : MonoBehaviour
             }
             if (Input.GetKey("e") && hit.collider.gameObject.tag =="Porte" && hasKey==true )
             {
-                hit.collider.gameObject.transform.Rotate(90.0f,90.0f,0.0f,Space.World);
+                hit.collider.gameObject.transform.Translate(3,0,0);
             }
         }
     }
