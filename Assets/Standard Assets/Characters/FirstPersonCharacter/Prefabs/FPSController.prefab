@@ -395,5 +395,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distancehit: 5
-  other: {fileID: 0}
+  anim: {fileID: 0}
   hasKey: 0
