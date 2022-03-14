@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.SceneManagement;
 
 public class PausedMenu : MonoBehaviour
 {
-
-    public static GameObject pausedMenu;
+    [SerializeField] GameObject pausedMenu;
     public static bool isPaused;
 
     // Start is called before the first frame update
     void Start()
     {
-        pausedMenu.SetActive(false);
+        pausedMenu.SetActive(true);
     }
 
     // Update is called once per frame
@@ -47,13 +47,57 @@ public class PausedMenu : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        if(EditorUtility.DisplayDialog("Return to the main menu ?",
+            "Are you sure you want to return to the main menu ?\n" +
+            "Your progression will not be saved.",
+            "Yes", "No"))
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("Scene Robin");
+            isPaused = false;
+        }
+        
+    }
+
+    public void Quit()
+    {
+        if (EditorUtility.DisplayDialog("Quit the game ?",
+            "Are you sure you want to quit the game ?\n" +
+            "Your progression will not be saved.",
+            "Yes", "No"))
+        {
+            Application.Quit();
+        }
+    }
+    
+}
+
+
+/*
+ [SerializeField] GameObject pausedMenu;
+
+    public void PauseGame()
+    {
+        pausedMenu.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void ResumeGame()
+    {
+        pausedMenu.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void GoToMainMenu()
+    {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Scene Robin");
-        isPaused = false;
     }
 
     public void Quit()
     {
         Application.Quit();
-    }
-}
+    } 
+ 
+ 
+ */
