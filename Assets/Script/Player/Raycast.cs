@@ -17,7 +17,7 @@ public class Raycast : MonoBehaviour
     public bool hasKey=false;
     public bool securityKey=false;
     public TMP_Text truccopie;
-    private int copie=0;
+    public int copie=0;
     void Update()
     {
         RaycastHit hit;
@@ -74,12 +74,14 @@ public class Raycast : MonoBehaviour
             if(Input.GetKey("e") && hit.transform.gameObject.tag == "Copie")
             {
                 Debug.Log("sfggdhdfjfhdfhgs");
+                copie++;
 
-                TMP_Text truccopie = GameObject.Find("Nbcopie").GetComponent<TMP_Text>();
+                TMP_Text truccopie = GameObject.Find("NbCopie").GetComponent<TMP_Text>();
                 if ( truccopie != null)
                 {
                     truccopie.text = copie.ToString();
                 }
+                Destroy(hit.transform.gameObject);
             }
         }
 

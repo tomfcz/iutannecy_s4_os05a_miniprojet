@@ -12,9 +12,14 @@ TagManager:
   - PorteD361
   - PorteD350
   - PorteD352
+<<<<<<< Updated upstream
   - PorteD353
   - PorteChef
   - PorteSecretaire
+=======
+  - IA dep1
+  - IA dep2
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
