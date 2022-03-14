@@ -13,7 +13,6 @@ public class Raycast : MonoBehaviour
     [SerializeField] Animator secporte2;
     public bool hasKey=false;
     public bool securityKey=false;
-    public TMP_Text truccopie;
     public int copie=0;
     void Update()
     {
@@ -26,6 +25,7 @@ public class Raycast : MonoBehaviour
            
             if (hit.transform.gameObject.tag =="Clé" && Input.GetKey("e")) 
             {
+                Debug.Log("lol");
                 hasKey=true;
                 Destroy(hit.transform.gameObject);
             }
