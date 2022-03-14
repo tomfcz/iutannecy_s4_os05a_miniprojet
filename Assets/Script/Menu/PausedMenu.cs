@@ -8,32 +8,18 @@ public class PausedMenu : MonoBehaviour
 {
     [SerializeField] GameObject pausedMenu;
     public static bool isPaused;
+    public GameObject pauseButton;
 
-    // Start is called before the first frame update
-    void Start()
+    public void start()
     {
         pausedMenu.SetActive(true);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (isPaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
-        }
+        pauseButton.SetActive(true);
     }
 
     public void PauseGame()
     {
         pausedMenu.SetActive(true);
+        pauseButton.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
     }
@@ -41,6 +27,7 @@ public class PausedMenu : MonoBehaviour
     public void ResumeGame()
     {
         pausedMenu.SetActive(false);
+        pauseButton.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
     }
