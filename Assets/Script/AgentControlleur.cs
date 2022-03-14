@@ -19,7 +19,7 @@ public class AgentControlleur : MonoBehaviour
     void Update()
     {
         agent.destination = target.position;
-        Debug.Log(target.position.x);
+      
         
     }
 }

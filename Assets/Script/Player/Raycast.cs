@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Raycast : MonoBehaviour
@@ -15,12 +16,14 @@ public class Raycast : MonoBehaviour
     [SerializeField] Animator secporte2;
     public bool hasKey=false;
     public bool securityKey=false;
+    public TMP_Text truccopie;
+    private int copie=0;
     void Update()
     {
         RaycastHit hit;
         
       
-        if (Physics.Raycast(transform.position, transform.forward, out hit, distancehit) || hit.transform.gameObject.tag =="Copie" || hit.transform.gameObject.tag =="Clé" || hit.transform.gameObject.tag =="Porte" )
+        if (Physics.Raycast(transform.position, transform.forward, out hit, distancehit))
         {
             
            
@@ -29,7 +32,7 @@ public class Raycast : MonoBehaviour
                 hasKey=true;
                 Destroy(hit.transform.gameObject);
             }
-
+            //Gestion des clés
 
             if (Input.GetKey("e") && hit.transform.gameObject.tag =="PorteD360" && hasKey==true )
             {
@@ -64,6 +67,19 @@ public class Raycast : MonoBehaviour
                 securityKey=false;
 
                 
+            }
+
+            //Gestion des copies
+            
+            if(Input.GetKey("e") && hit.transform.gameObject.tag == "Copie")
+            {
+                Debug.Log("sfggdhdfjfhdfhgs");
+
+                TMP_Text truccopie = GameObject.Find("Nbcopie").GetComponent<TMP_Text>();
+                if ( truccopie != null)
+                {
+                    truccopie.text = copie.ToString();
+                }
             }
         }
 
