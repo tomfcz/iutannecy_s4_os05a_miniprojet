@@ -7,35 +7,35 @@ public class AgentControlleur : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Transform positionprof;
-    public Transform target1;
-    public Transform target2;
+    public Transform[] checkpoints;
     public Transform joueur3;
-    private int targetqui=1;
+    int i=0;
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         positionprof = GetComponent<Transform>();
-        
+        agent.SetDestination(checkpoints[0].position);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (targetqui == 1)
+        if (i >= checkpoints.Length) return;
+        if (agent.remainingDistance <= agent.stoppingDistance)
         {
-            agent.destination = target1.position;
-            if(positionprof.position==target1.position)
+            Debug.Log("YOU REACHED IT");
+            Debug.Log(i);
+            if (++i < checkpoints.Length)
             {
-                agent.SetDestination(target2.position);
+                this.agent.SetDestination(checkpoints[i].position);
             }
-        }
-        if (targetqui == 2)
-        {
-            agent.destination = target2.position;
-            if (positionprof.position == target2.position)
+            else
             {
-                agent.SetDestination(target1.position);
+                agent.ResetPath();
+                i = 0;
+                this.agent.SetDestination(checkpoints[i].position);
             }
         }
 
