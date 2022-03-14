@@ -12,6 +12,9 @@ TagManager:
   - PorteD361
   - PorteD350
   - PorteD352
+  - PorteD353
+  - PorteChef
+  - PorteSecretaire
   layers:
   - Default
   - TransparentFX
