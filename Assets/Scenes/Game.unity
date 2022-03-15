@@ -35506,6 +35506,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: a8a62c8b924032346a60ac9e828c29e5, type: 2}
     - target: {fileID: 7037964463964367060, guid: 7bbb6a18ea5c7934d9a494575a6c88e8, type: 3}
+      propertyPath: m_Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7037964463964367060, guid: 7bbb6a18ea5c7934d9a494575a6c88e8, type: 3}
       propertyPath: m_AutoBraking
       value: 0
       objectReference: {fileID: 0}
