@@ -9,6 +9,7 @@ public class AgentControlleur : MonoBehaviour
     private NavMeshAgent agent;
     private Transform positionprof;
     public Transform[] checkpoints;
+    [SerializeField] Rayondetection trol;
     public Transform joueur3;
     public IASensor detection;
     GameObject pickup;
@@ -31,7 +32,7 @@ public class AgentControlleur : MonoBehaviour
     {
         if (!GetComponent<IASensor>().IsInSight(pickup))
         {
-            Debug.Log("lol");
+            agent.speed = agent.speed + trol.copie * 2;
             if (i >= checkpoints.Length) return;
             if (agent.remainingDistance <= agent.stoppingDistance)
             {

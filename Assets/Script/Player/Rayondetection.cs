@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Raycast : MonoBehaviour
+public class Rayondetection : MonoBehaviour
 {
     
     [SerializeField] float distancehit = 1.0f;
