@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 
 public class AgentControlleur : MonoBehaviour
@@ -30,8 +31,14 @@ public class AgentControlleur : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GetComponent<IASensor>().IsInSight(pickup))
+        if (positionprof.transform==joueur3.transform)
         {
+            SceneManager.LoadScene("Perdu");
+        }
+        if (!GetComponent<IASensor>().IsInSight(pickup))
+
+        {
+            
             agent.speed = agent.speed + trol.copie * 2;
             if (i >= checkpoints.Length) return;
             if (agent.remainingDistance <= agent.stoppingDistance)

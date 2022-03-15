@@ -91,7 +91,7 @@ public class Rayondetection : MonoBehaviour
 
             if (Input.GetKey("e") && hit.transform.gameObject.tag == "Copie")
             {
-                Debug.Log("sfggdhdfjfhdfhgs");
+               
                 copie++;
 
                 TMP_Text truccopie = GameObject.Find("NbCopie").GetComponent<TMP_Text>();
