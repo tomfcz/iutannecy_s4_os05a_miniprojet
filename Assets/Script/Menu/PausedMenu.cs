@@ -8,6 +8,8 @@ public class PausedMenu : MonoBehaviour
 {
     public static bool gamePaused = false;
     [SerializeField] GameObject pauseMenu;
+    /*public [CameraScript] cam;
+    ((Behaviour) cam).enabled = true/false;*/
 
     void Update()
     {
@@ -26,12 +28,14 @@ public class PausedMenu : MonoBehaviour
 
     public void Paused()
     {
+        //cam.enabled = false;
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
         gamePaused = true;
     }
     public void Resume()
     {
+        //cam.enabled = true;
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
         gamePaused = false;
