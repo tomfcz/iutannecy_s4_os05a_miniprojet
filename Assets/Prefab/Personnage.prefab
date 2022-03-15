@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec9bc34d72cafc4781f4a58b782a8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   distancehit: 20
   animporte: []
@@ -160,7 +161,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
 >>>>>>> Stashed changes
+=======
+  distancehit: 5
+  animporte: []
+  animporteSalleDesPROF: {fileID: 0}
+  secporte1: {fileID: 0}
+  secporte2: {fileID: 0}
+>>>>>>> parent of 6d5fdad (IA et clés fixe et copie)
   hasKey: 0
+  securityKey: 0
+  truccopie: {fileID: 0}
   copie: 0
 --- !u!1001 &6244477403262297237
 PrefabInstance:
