@@ -36,4 +36,9 @@ public class MainMenu : MonoBehaviour
             Application.Quit();
         }
     }
+
+    public void CreditButton()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
