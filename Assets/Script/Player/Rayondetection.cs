@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Rayondetection : MonoBehaviour
 {
@@ -15,7 +16,10 @@ public class Rayondetection : MonoBehaviour
     {
         RaycastHit hit;
 
-
+        if (copie==8)
+        {
+            SceneManager.LoadScene("Win");
+        }
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 20, layerMask))
         {
 
