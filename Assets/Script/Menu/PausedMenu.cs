@@ -40,7 +40,7 @@ public class PausedMenu : MonoBehaviour
             "Yes", "No"))
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("Scene Robin");
+            SceneManager.LoadScene("Main menu");
             isPaused = false;
         }
         

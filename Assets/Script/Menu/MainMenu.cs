@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayButton()
     {
-        SceneManager.LoadScene("Level 0");
+        SceneManager.LoadScene("Game");
     }
 
     public void SettingsButton()
@@ -18,12 +18,12 @@ public class MainMenu : MonoBehaviour
 
     public void goToMenu()
     {
-        SceneManager.LoadScene("Scene Robin");
+        SceneManager.LoadScene("Main menu");
     }
 
     public void BackButton()
     {
-        SceneManager.LoadScene("Scene Robin");
+        SceneManager.LoadScene("Main menu");
     }
 
     public void QuitButton()
