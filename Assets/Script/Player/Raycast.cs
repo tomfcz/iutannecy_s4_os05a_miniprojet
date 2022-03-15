@@ -8,7 +8,7 @@ public class Raycast : MonoBehaviour
     
     [SerializeField] float distancehit = 1.0f;
     public Animator[] animporte;
-    public bool hasKey=false;
+    public bool hasKey=true;
     public int copie=0;
     void Update()
     {
