@@ -20,7 +20,7 @@ public class Raycast : MonoBehaviour
 
             //Gestion des clés
 
-            if (Input.GetKey("e") && hit.transform.gameObject.tag == "Cle") 
+            if (Input.GetKey("e") && hit.collider.gameObject.tag == "Cle") 
             {
                 Debug.Log("lol");
                 hasKey=true;

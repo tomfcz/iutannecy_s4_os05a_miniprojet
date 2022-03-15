@@ -57,6 +57,7 @@ public class IASensor : MonoBehaviour
     {
         Vector3 origin = transform.position;
         Vector3 dest = obj.transform.position;
+
         Vector3 direction = dest - origin;
         if (direction.y < 0 || direction.y > height)
         {
@@ -75,7 +76,7 @@ public class IASensor : MonoBehaviour
         {
             return false;
         }
-        Debug.Log("fsd");
+       
         return true;
     }
 

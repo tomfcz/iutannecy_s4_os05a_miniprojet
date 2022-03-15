@@ -12,27 +12,30 @@ public class AgentControlleur : MonoBehaviour
     public Transform joueur3;
     public IASensor detection;
     GameObject pickup;
+ 
     int i = 0;
     // Start is called before the first frame update
     void Start()
     {
-        pickup = GameObject.Find("Prof");
+
         detection = GetComponent<IASensor>();
         agent = GetComponent<NavMeshAgent>();
         positionprof = GetComponent<Transform>();
         agent.SetDestination(checkpoints[0].position);
+        pickup = GameObject.Find("Personnage");
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!detection.IsInSight(pickup))
+        if (!GetComponent<IASensor>().IsInSight(pickup))
         {
+            Debug.Log("lol");
             if (i >= checkpoints.Length) return;
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
-                Debug.Log("YOU REACHED IT");
+               
                 Debug.Log(i);
                 if (++i < checkpoints.Length)
                 {
@@ -46,6 +49,12 @@ public class AgentControlleur : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            this.agent.SetDestination(joueur3.position);
+        }
+            
+        
     }
 }
 

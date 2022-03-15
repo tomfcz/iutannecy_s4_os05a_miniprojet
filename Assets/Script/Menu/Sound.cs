@@ -11,8 +11,8 @@ public class Sound : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        background = Son.Load<AudioClip>("bgSound");
-        audioSrc = GetComponent<AudioSource>;
+//        background = Son.Load<AudioClip>("bgSound");
+        audioSrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
