@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Copie
+  - Porte
+  - PorteD360
+  - PorteD361
+  - Cle
   layers:
   - Default
   - TransparentFX

@@ -21,15 +21,16 @@ public class Raycast : MonoBehaviour
       
         if (Physics.Raycast(transform.position, transform.forward, out hit, distancehit))
         {
-            
-           
-            if (hit.transform.gameObject.tag =="Clé" && Input.GetKey("e")) 
+
+            //Gestion des clés
+
+            if (Input.GetKey("e") && hit.transform.gameObject.tag == "Cle") 
             {
                 Debug.Log("lol");
                 hasKey=true;
                 Destroy(hit.transform.gameObject);
             }
-            //Gestion des clés
+            
 
             if (Input.GetKey("e") && hit.transform.gameObject.tag =="PorteD360" && hasKey==true )
             {
@@ -37,7 +38,7 @@ public class Raycast : MonoBehaviour
                 animporte[0].SetBool("bouge",true);
                 hasKey =false;
             }
-            if (Input.GetKey("e") && hit.transform.gameObject.tag == "Porte361" && hasKey == true)
+            if (Input.GetKey("e") && hit.transform.gameObject.tag == "PorteD361" && hasKey == true)
             {
                 Debug.Log("lol");
                 animporte[1].SetBool("bouge", true);
