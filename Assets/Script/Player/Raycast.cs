@@ -8,11 +8,7 @@ public class Raycast : MonoBehaviour
     
     [SerializeField] float distancehit = 1.0f;
     public Animator[] animporte;
-    [SerializeField] Animator animporteSalleDesPROF;
-    [SerializeField] Animator secporte1;
-    [SerializeField] Animator secporte2;
     public bool hasKey=false;
-    public bool securityKey=false;
     public int copie=0;
     void Update()
     {
@@ -56,20 +52,39 @@ public class Raycast : MonoBehaviour
                 animporte[3].SetBool("bouge", true);
                 hasKey = false;
             }
-
-            if (Input.GetKey("e") && hit.transform.gameObject.tag =="PorteSecurity" && securityKey==true )
+            if (Input.GetKey("e") && hit.transform.gameObject.tag == "PorteD353" && hasKey == true)
             {
-                Debug.Log("lololi");
-                secporte1.SetBool("bougesec",true);
-                secporte2.SetBool("bougesec",true);
-                securityKey=false;
-
-                
+                Debug.Log("lol");
+                animporte[4].SetBool("bouge", true);
+                hasKey = false;
+            }
+            if (Input.GetKey("e") && hit.transform.gameObject.tag == "PorteSecretaire" && hasKey == true)
+            {   
+                Debug.Log("lol");
+                animporte[5].SetBool("bouge", true);
+                hasKey = false;
             }
 
+            if (Input.GetKey("e") && hit.transform.gameObject.tag == "PorteChef" && hasKey == true)
+            {
+                Debug.Log("lol");
+                animporte[6].SetBool("bouge", true);
+                hasKey = false;
+            }
+
+            if (Input.GetKey("e") && hit.transform.gameObject.tag == "PorteSecurity" && hasKey == true)
+            {
+                Debug.Log("lol");
+                animporte[7].SetBool("bouge", true);
+                hasKey = false;
+            }
+
+
+
+
             //Gestion des copies
-            
-            if(Input.GetKey("e") && hit.transform.gameObject.tag == "Copie")
+
+            if (Input.GetKey("e") && hit.transform.gameObject.tag == "Copie")
             {
                 Debug.Log("sfggdhdfjfhdfhgs");
                 copie++;
