@@ -13,7 +13,9 @@ public class IASensor : MonoBehaviour
     public float height = 1.0f;
     public Color meshColor = Color.red;
     public int scanFrequency = 30;
+    public List<GameObject> Objects = new List<GameObject>(); 
     public LayerMask layers;
+    public LayerMask occlusionLayers;
     Mesh mesh;
 
     Collider[] colliders = new Collider[50];
@@ -40,7 +42,41 @@ public class IASensor : MonoBehaviour
     private void Scan()
     {
         count = Physics.OverlapSphereNonAlloc(transform.position,distance, colliders, layers, QueryTriggerInteraction.Collide);
+        Objects.Clear();
+        for (int i = 0; i < count; i++)
+        {
+            GameObject obj = colliders[i].gameObject;
+            if(IsInSight(obj))
+            {
+                Objects.Add(obj);
+            }
+        }
+    }
 
+    public bool IsInSight(GameObject obj)
+    {
+        Vector3 origin = transform.position;
+        Vector3 dest = obj.transform.position;
+        Vector3 direction = dest - origin;
+        if (direction.y < 0 || direction.y > height)
+        {
+            return false;
+
+        } 
+        direction.y = 0;
+        float deltaAngle = Vector3.Angle(direction, transform.forward);
+        if (deltaAngle > angle)
+        {
+        return false;
+        }
+        origin.y += height / 2;
+        dest.y = origin.y;
+        if(Physics.Linecast(origin,dest, occlusionLayers))
+        {
+            return false;
+        }
+        Debug.Log("fsd");
+        return true;
     }
 
     Mesh CreateWedgeMesh()
@@ -153,6 +189,12 @@ public class IASensor : MonoBehaviour
         for(int i = 0;i < count; i++)
         {
             Gizmos.DrawSphere(colliders[i].transform.position, 0.2f);
+        }
+
+        Gizmos.color = Color.green;
+        foreach( var obj in Objects)
+        {
+            Gizmos.DrawSphere(obj.transform.position, 0.2f);
         }
     }
 }
