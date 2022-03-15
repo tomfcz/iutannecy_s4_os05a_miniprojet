@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3914570265024837164}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Centre orientation
   m_TagString: Porte
   m_Icon: {fileID: 0}
@@ -129,6 +129,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c61e67ba6ef399440bdbffbce8c1ab07, type: 3}
       propertyPath: m_Name
       value: door
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c61e67ba6ef399440bdbffbce8c1ab07, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c61e67ba6ef399440bdbffbce8c1ab07, type: 3}
       propertyPath: m_TagString

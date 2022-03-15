@@ -9,11 +9,18 @@ TagManager:
   - PorteD360
   - PorteD361
   - Cle
+  - "Cl\xE9"
+  - PorteChef
+  - PorteSecretaire
+  - PorteSecurity
+  - PorteD353
+  - PorteD352
+  - PorteD350
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Joueur
   - Water
   - UI
   - Pickup
