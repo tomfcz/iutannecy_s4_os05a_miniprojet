@@ -56,6 +56,11 @@ public class PausedMenu : MonoBehaviour
             Application.Quit();
         }
     }
+
+    public void test()
+    {
+        Debug.Log("test oui");
+    }
     
 }
 
