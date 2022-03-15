@@ -7,16 +7,18 @@ using UnityEngine.SceneManagement;
 public class PausedMenu : MonoBehaviour
 {
     public static bool gamePaused = false;
-    public GameObject pauseMenuUI;
+    [SerializeField] GameObject pauseMenu;
 
-    void Updatee()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (gamePaused)
             {
+                Debug.Log("esc");
                 Resume();
             } else {
+                Debug.Log("esc");
                 Paused();
             }
         }
@@ -24,13 +26,13 @@ public class PausedMenu : MonoBehaviour
 
     public void Paused()
     {
-        pauseMenuUI.SetActive(true);
+        pauseMenu.SetActive(true);
         Time.timeScale = 0;
         gamePaused = true;
     }
     public void Resume()
     {
-        pauseMenuUI.SetActive(false);
+        pauseMenu.SetActive(false);
         Time.timeScale = 1;
         gamePaused = false;
     }
