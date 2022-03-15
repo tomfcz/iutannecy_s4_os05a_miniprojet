@@ -228,7 +228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3824402806588604643, guid: 7d531afab4001d247a16e150fccb63a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 143
+      value: 141.1
       objectReference: {fileID: 0}
     - target: {fileID: 3824402806588604643, guid: 7d531afab4001d247a16e150fccb63a2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -265,6 +265,10 @@ PrefabInstance:
     - target: {fileID: 8438620010492405336, guid: 7d531afab4001d247a16e150fccb63a2, type: 3}
       propertyPath: m_Name
       value: "Cl\xE9s"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438620010492405336, guid: 7d531afab4001d247a16e150fccb63a2, type: 3}
+      propertyPath: m_TagString
+      value: Cle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d531afab4001d247a16e150fccb63a2, type: 3}
@@ -503,6 +507,10 @@ PrefabInstance:
     - target: {fileID: 6244477403262263861, guid: dc14ddb868c92b64f80158d111ef8009, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494911391235520017, guid: dc14ddb868c92b64f80158d111ef8009, type: 3}
+      propertyPath: distancehit
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc14ddb868c92b64f80158d111ef8009, type: 3}

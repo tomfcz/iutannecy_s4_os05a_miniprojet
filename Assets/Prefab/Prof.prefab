@@ -2086,6 +2086,7 @@ GameObject:
   - component: {fileID: -6517130719274735743}
   - component: {fileID: 7037964463964367060}
   - component: {fileID: 8641000418085476469}
+  - component: {fileID: 8517891284836648455}
   m_Layer: 0
   m_Name: Prof
   m_TagString: Untagged
@@ -2212,7 +2213,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d045aaddeed3c9498a27b8f77fdaedf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 6244477403261910549, guid: dc14ddb868c92b64f80158d111ef8009, type: 3}
+  checkpoints: []
+  joueur3: {fileID: 0}
+--- !u!114 &8517891284836648455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8447826047359621446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa86cf2ec510bbc429d5bb4b440e2759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 20
+  angle: 30
+  height: 6
+  meshColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &8817898888258712963
 GameObject:
   m_ObjectHideFlags: 0
