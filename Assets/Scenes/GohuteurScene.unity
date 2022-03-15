@@ -544,6 +544,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6244477403263508501, guid: dc14ddb868c92b64f80158d111ef8009, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.62352943
+      objectReference: {fileID: 0}
+    - target: {fileID: 6244477403263508501, guid: dc14ddb868c92b64f80158d111ef8009, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.4666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 6244477403263508501, guid: dc14ddb868c92b64f80158d111ef8009, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.36862746
+      objectReference: {fileID: 0}
     - target: {fileID: 8494911391235520017, guid: dc14ddb868c92b64f80158d111ef8009, type: 3}
       propertyPath: distancehit
       value: 10

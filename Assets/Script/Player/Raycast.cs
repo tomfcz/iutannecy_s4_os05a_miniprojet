@@ -23,7 +23,7 @@ public class Raycast : MonoBehaviour
             if (Input.GetKey("e") && hit.collider.gameObject.tag == "Cle") 
             {
                 Debug.Log("lol");
-                hasKey=true;
+                //hasKey=true;
                 Destroy(hit.transform.gameObject);
             }
             
@@ -32,51 +32,51 @@ public class Raycast : MonoBehaviour
             {
                 Debug.Log("lol");
                 animporte[0].SetBool("bouge",true);
-                hasKey =false;
+                //hasKey =false;
             }
             if (Input.GetKey("e") && hit.transform.gameObject.tag == "PorteD361" && hasKey == true)
             {
                 Debug.Log("lol");
                 animporte[1].SetBool("bouge", true);
-                hasKey = false;
+                //hasKey = false;
             }
             if (Input.GetKey("e") && hit.transform.gameObject.tag == "PorteD350" && hasKey == true)
             {
                 Debug.Log("lol");
                 animporte[2].SetBool("bouge", true);
-                hasKey = false;
+                //hasKey = false;
             }
             if (Input.GetKey("e") && hit.transform.gameObject.tag == "PorteD352" && hasKey == true)
             {
                 Debug.Log("lol");
                 animporte[3].SetBool("bouge", true);
-                hasKey = false;
+                //hasKey = false;
             }
             if (Input.GetKey("e") && hit.transform.gameObject.tag == "PorteD353" && hasKey == true)
             {
                 Debug.Log("lol");
                 animporte[4].SetBool("bouge", true);
-                hasKey = false;
+                //hasKey = false;
             }
             if (Input.GetKey("e") && hit.transform.gameObject.tag == "PorteSecretaire" && hasKey == true)
             {   
                 Debug.Log("lol");
                 animporte[5].SetBool("bouge", true);
-                hasKey = false;
+                // hasKey = false;
             }
 
             if (Input.GetKey("e") && hit.transform.gameObject.tag == "PorteChef" && hasKey == true)
             {
                 Debug.Log("lol");
                 animporte[6].SetBool("bouge", true);
-                hasKey = false;
+                //  hasKey = false;
             }
 
             if (Input.GetKey("e") && hit.transform.gameObject.tag == "PorteSecurity" && hasKey == true)
             {
                 Debug.Log("lol");
                 animporte[7].SetBool("bouge", true);
-                hasKey = false;
+                //  hasKey = false;
             }
 
 
