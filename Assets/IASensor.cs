@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,14 +23,26 @@ public class IASensor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scanInterval = 1.0f / scanFrequency;
+        scanInterval = 1.0f / scanFrequency ;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        scanTimer -= Time.deltaTime;
+        if(scanTimer <0)
+        {
+            scanTimer += scanInterval;
+            Scan();
+        }
     }
+
+    private void Scan()
+    {
+        count = Physics.OverlapSphereNonAlloc(transform.position,distance, colliders, layers, QueryTriggerInteraction.Collide);
+
+    }
+
     Mesh CreateWedgeMesh()
     {
         Mesh mesh = new Mesh();
@@ -125,7 +138,8 @@ public class IASensor : MonoBehaviour
 
     private void OnValidate()
     {
-        mesh = CreateWedgeMesh(); 
+        mesh = CreateWedgeMesh();
+        scanInterval = 1.0f / scanFrequency;
     }
     private void OnDrawGizmos()
     {
@@ -133,6 +147,12 @@ public class IASensor : MonoBehaviour
         {
             Gizmos.color = meshColor;
             Gizmos.DrawMesh(mesh, transform.position, transform.rotation);
+        }
+
+        Gizmos.DrawWireSphere(transform.position, distance);
+        for(int i = 0;i < count; i++)
+        {
+            Gizmos.DrawSphere(colliders[i].transform.position, 0.2f);
         }
     }
 }
