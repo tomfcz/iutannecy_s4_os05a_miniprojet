@@ -146,8 +146,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec9bc34d72cafc4781f4a58b782a8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   distancehit: 20
   animporte: []
+=======
+  distancehit: 5
+  animporte:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+>>>>>>> Stashed changes
   hasKey: 0
   copie: 0
 --- !u!1001 &6244477403262297237
